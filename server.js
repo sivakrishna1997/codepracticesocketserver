@@ -12,13 +12,13 @@ const path = require('path');
 // global.error = error;
 
 const server = require('http').createServer(app);
-const io = require('socket.io')(server);
-// const io = require('socket.io')(server, {
-//     cors: {
-//         origin: "*",
-//         methods: ['GET', 'POST', 'PUT', 'DELETE']
-//     }
-// })
+// const io = require('socket.io')(server);
+const io = require('socket.io')(server, {
+    cors: {
+        origin: "*",
+        methods: ['GET', 'POST', 'PUT', 'DELETE']
+    }
+})
 
 
 // app.use(morgan('dev'));
